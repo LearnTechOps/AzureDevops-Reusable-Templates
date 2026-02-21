@@ -26,6 +26,7 @@
                 ARM_CLIENT_ID: $(ClientID)
                 ARM_TENANT_ID: $(TenantID)
                 ARM_CLIENT_SECRET: $(ClientSecret)
+                ARM_SUBSCRIPTION_ID: $(SubscriptionID)
             # we are adding above step to view the env variable we got in keyvault task
 
           - task: terraformInstaller@1
@@ -40,6 +41,7 @@
                 ARM_CLIENT_ID: $(ClientID)
                 ARM_TENANT_ID: $(TenantID)
                 ARM_CLIENT_SECRET: $(ClientSecret)
+                ARM_SUBSCRIPTION_ID: $(SubscriptionID)
                 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
 
         #now left side what we see is  the environment variable we are using in the script and right side is the pipeline variable we got from keyvault task and we are passing it to the script as env variable so that terraform can use it to authenticate with azure and do the plan
@@ -67,6 +69,7 @@
                 ARM_CLIENT_ID: $(ClientID)
                 ARM_TENANT_ID: $(TenantID)
                 ARM_CLIENT_SECRET: $(ClientSecret)
+                ARM_SUBSCRIPTION_ID: $(SubscriptionID)
             # we are adding above step to view the env variable we got in keyvault task
 
           - task: terraformInstaller@1
@@ -81,6 +84,7 @@
                 ARM_CLIENT_ID: $(ClientID)
                 ARM_TENANT_ID: $(TenantID)
                 ARM_CLIENT_SECRET: $(ClientSecret)
+                ARM_SUBSCRIPTION_ID: $(SubscriptionID)
                 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
 
         #now left side what we see is  the environment variable we are using in the script and right side is the pipeline variable we got from keyvault task and we are passing it to the script as env variable so that terraform can use it to authenticate with azure and do the plan
@@ -120,6 +124,7 @@
                 ARM_CLIENT_ID: $(ClientID)
                 ARM_TENANT_ID: $(TenantID)
                 ARM_CLIENT_SECRET: $(ClientSecret)
+                ARM_SUBSCRIPTION_ID: $(SubscriptionID)
             # we are adding above step to view the env variable we got in keyvault task
 
           - task: terraformInstaller@1
@@ -134,6 +139,7 @@
                 ARM_CLIENT_ID: $(ClientID)
                 ARM_TENANT_ID: $(TenantID)
                 ARM_CLIENT_SECRET: $(ClientSecret)
+                ARM_SUBSCRIPTION_ID: $(SubscriptionID)
                 #https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
 
         #now left side what we see is  the environment variable we are using in the script and right side is the pipeline variable we got from keyvault task and we are passing it to the script as env variable so that terraform can use it to authenticate with azure and do the plan
