@@ -6,7 +6,7 @@
     default: [] 
  
  jobs:
-  - job: Terraform-Plan-Feature
+  - job: Terraform_Plan_Feature
     displayName: 'Terraform Plan Only From Feature'
     condition: ne(variables['Build.SourceBranch'], 'refs/heads/main')
     pool:
@@ -47,7 +47,7 @@
             # lets try to prove by modifying the env variable and see if it throws error or not
              
 
-  - job: Terraform-Plan-Main
+  - job: Terraform_Plan_Main
     displayName: 'Terraform Plan From Main'
     condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
     pool:
@@ -87,10 +87,10 @@
             displayName: 'Terraform Plan and Env Variable'
             # lets try to prove by modifying the env variable and see if it throws error or not
 
-  - job: Terraform-Approve
+  - job: Terraform_Approve
     displayName: 'Terraform Approve'
     # condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
-    dependsOn: Terraform-Plan-Main
+    dependsOn: Terraform_Plan_Main
     # hierarchy is jobs --> job --> steps --> task/script
     pool: server 
 
@@ -100,9 +100,9 @@
        
 
 
-  - job: Terraform-Apply
+  - job: Terraform_Apply
     displayName: 'Terraform Apply'
-    dependsOn: Terraform-Approve
+    dependsOn: Terraform_Approve
     pool:
       vmImage: 'ubuntu-latest'
     steps:
