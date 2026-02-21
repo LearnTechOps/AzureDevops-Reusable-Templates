@@ -1,6 +1,6 @@
 
- parameters: # if parameter not defined we ll see issue
-  - name: buildsteps # got an issue when no hyphen in the name
+ parameters: # if parameter not defined we ll see issue##
+  - name: buildsteps # got an issue when no hyphen in the name 
     displayName: 'Steps to add'
     type: stepList
     default: [] 
