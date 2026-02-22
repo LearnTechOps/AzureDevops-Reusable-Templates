@@ -36,6 +36,9 @@
           - script: |
               make init
               make plan
+              make fmtcheck
+              make checkov
+              make tfsec
           #terraform will expect the env variables in below format , if some other name it wont work
             env:
                 ARM_CLIENT_ID: $(ClientID)
@@ -79,6 +82,9 @@
           - script: |
               make init
               make plan
+              make fmtcheck
+              make checkov
+              make tfsec
           #terraform will expect the env variables in below format , if some other name it wont work
             env:
                 ARM_CLIENT_ID: $(ClientID)
